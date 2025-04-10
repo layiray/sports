@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-100 text-gray-700;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    @apply text-3xl font-extrabold text-green-600 mb-6;
+}
+
+h2 {
+    @apply text-2xl font-bold my-4 text-gray-800;
+}
+
+h3 {
+    @apply text-xl font-semibold my-4 text-gray-700;
+}
+
+p {
+    @apply my-2 text-gray-600;
+}
+
+ul {
+    @apply my-6 list-disc pl-6 text-gray-600;
+}
+
+/*header*/
+header {
+    @apply bg-white shadow-md sticky top-0 z-50;
+
+    nav {
+        @apply flex items-center gap-5 max-w-screen-lg px-6 py-4 mx-auto;
+    }
+
+    h1 {
+        @apply text-green-600 font-extrabold text-2xl mr-auto;
+    }
+
+    .nav-link {
+        @apply text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out;
+    }
+}
+
+/*form elements*/
+form {
+    @apply max-w-screen-sm mx-auto bg-white p-6 rounded shadow-md;
+}
+
+input, select, textarea {
+    @apply block w-full mt-2 mb-4 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+}
+
+input:focus, select:focus, textarea:focus {
+    @apply ring-2 ring-green-500;
+}
+
+label {
+    @apply font-semibold text-gray-700;
+}
+
+/*custom classes */
+.container {
+    @apply max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-12 py-8 animate-fade-in;;
+}
+.card {
+    @apply bg-white rounded border border-gray-200 px-4 py-4 my-4 shadow-sm hover:shadow-lg transition duration-300 ease-in-out flex flex-col sm:flex-row justify-between items-center ;
+}
+.highlight {
+    @apply border-l-4 border-l-red-500;
+}
+.btn {
+    @apply rounded px-4 py-2 bg-green-500 text-white font-semibold hover:bg-green-600 hover:shadow-lg transition duration-300 ease-in-out;
+}
+
+.btn-secondary {
+    @apply rounded px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 hover:text-gray-900 transition duration-300 ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@layer utilities {
+    .animate-fade-in {
+        animation: fade-in 0.5s ease-in-out;
+    }
+}
